@@ -1,0 +1,33 @@
+{
+  "name": "demo-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devtool": "devtool index --watch",
+    "dev": "nodemon index",
+    "start": "node index",
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "engines": {
+    "node": "6.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.7.5",
+    "body-parser": "^1.15.2",
+    "bower": "^1.8.0",
+    "connect-ensure-login": "^0.1.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "merge": "^1.2.0",
+    "mongodb": "^2.2.5",
+    "mongoose": "^4.6.8",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-google-oauth20": "^1.0.0"
+  }
+}

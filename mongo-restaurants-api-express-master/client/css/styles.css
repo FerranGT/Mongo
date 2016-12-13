@@ -1,0 +1,74 @@
+body {
+  min-height: 2000px;
+  padding-top: 50px;
+}
+
+.navbar {
+	margin:0;
+}
+
+#results-container, #details-container {
+	display:flex;
+}
+
+#results, #details {
+	width: 60%;
+}
+
+#results header, #details header {
+	margin: 40px 0 20px;
+	border-bottom: 1px solid #ccc;
+	width: 95%;
+}
+
+#map {
+	width: 60%;
+}
+#map > * {
+	position: fixed;
+	height:90vh;
+	width: 50%;
+}
+.grades h4 {
+	margin-bottom: 20px;
+}
+.grades {
+	border-bottom: 1px solid #ccc;
+	margin-bottom:10px;
+}
+.grade {
+	border-radius: 100%;
+	display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 3px;
+  border:1px solid #000;
+  color: #FFF;
+}
+
+.grade, .score {
+	font-size:20px;
+}
+
+.grade.A { background: #34a853; }
+.grade.B { background: #4285f4; }
+.grade.C { background: #fbbc05; }
+.grade.D { background: #ea4335; }
+.grade { background: #000; }
+
+.score.A { color: #34a853; }
+.score.B { color: #4285f4; }
+.score.C { color: #fbbc05; }
+.score.D { color: #ea4335; }
+
+#preview-image {
+	background-image: url('/img/dummy-img.jpg');
+	border:1px solid #ccc;
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center center;
+	margin-top:10px;
+}

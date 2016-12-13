@@ -1,0 +1,36 @@
+<div id="results-container">
+
+	<div id="results">
+
+		<header>
+
+	    <h3>{{ totalResults }} restaurants found
+	    	<span ng-show="filters.borough">in borough <strong>{{filters.borough}}</strong> </span>
+	    	<span ng-show="filters.cuisine">with cuisine <strong>{{filters.cuisine}}</strong> </span>
+			<h5>Showing page {{ currentPage }} of {{ totalPages }}</h5>
+
+		</header>
+
+		<!-- <ul uib-pagination total-items="totalResults" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="setPage(currentPage)" boundary-link-numbers="true" rotate="false"></ul>
+ -->
+
+
+		<ul class="list-unstyled search-results">
+			<li ng-repeat="restaurant in restaurants">
+				<h2><a href="#/details/{{restaurant._id}}">{{ restaurant.name }}</a> </h2>
+				<h5>{{ restaurant.borough }} | {{ restaurant.cuisine }}</h5>
+				<p>{{ restaurant.address.street }}, {{ restaurant.address.building }} | {{ restaurant.address.zipcode }} <button class="glyphicon glyphicon-map-marker" ng-click="setCenter(restaurant.address.coord)"></button></p>
+
+			</li>
+		</ul>
+
+		<hr>
+		 <ul uib-pagination total-items="totalResults" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="setPage(currentPage)" boundary-link-numbers="true" rotate="false"></ul>
+
+	</div>
+
+	<div id="map" >
+	  <ng-map id="main-map" center="40.579505,-73.98241999999999" zoom="10"></ng-map>
+	</div>
+
+</div>

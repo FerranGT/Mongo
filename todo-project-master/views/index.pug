@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .container.theme-showcase(role='main')
+    h1= title
+    .row
+      .col-md-6.col-offset-3
+        form(action='/task', method='POST', role='form')
+            .form-group
+              label(for='') Descripcion
+              input.form-control(type='text', name='desc', autofocus, placeholder='Add yout task...')
+            button.btn.btn-primary(type='submit') Submit
+        
